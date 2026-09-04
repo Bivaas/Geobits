@@ -1,0 +1,1451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Worldbook — country cards and quizzes</title>
+<meta name="description" content="Country cards with capitals, populations, landmarks and facts for countries around the world, plus multiple-choice quizzes by category. Built with HTML and CSS only.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top"><i aria-hidden="true"></i>Worldbook</a>
+    <nav aria-label="Primary">
+      <a href="#explore">Countries</a>
+      <a href="#quiz">Quiz</a>
+      <a href="#about">About</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <h1>The world in index cards.</h1>
+        <p class="lead">Capitals, populations, landmarks and the stray facts worth keeping, for 63 countries so far. Read a few, then see what stuck.</p>
+        <div class="actions">
+          <a class="btn primary" href="#explore">Browse countries</a>
+          <a class="btn quiet" href="#quiz">Start a quiz</a>
+        </div>
+      </div>
+
+      <div class="deck" aria-hidden="true">
+        <article class="card" data-r="asia">
+          <header><span class="iso">NP</span><div><h3>Nepal</h3><span class="region">Asia</span></div></header>
+          <dl class="facts">
+            <div><dt>Capital</dt><dd>Kathmandu</dd></div>
+            <div><dt>Population</dt><dd>≈ 30 million</dd></div>
+            <div class="wide"><dt>Famous landmark</dt><dd>Mount Everest (Sagarmatha)</dd></div>
+          </dl>
+          <details><summary>Facts and extras</summary>
+            <p><b>Fun fact</b>Eight of the world's fourteen peaks above 8,000 m stand in Nepal.</p>
+            <p><b>Special</b>The only country with a non-rectangular national flag; Lumbini is the birthplace of the Buddha.</p>
+          </details>
+        </article>
+        <article class="card" data-r="europe">
+          <header><span class="iso">IS</span><div><h3>Iceland</h3><span class="region">Europe</span></div></header>
+          <dl class="facts">
+            <div><dt>Capital</dt><dd>Reykjavík</dd></div>
+            <div><dt>Population</dt><dd>≈ 390,000</dd></div>
+            <div class="wide"><dt>Famous landmark</dt><dd>Hallgrímskirkja</dd></div>
+          </dl>
+          <details><summary>Facts and extras</summary>
+            <p><b>Fun fact</b>One of the very few countries with no mosquitoes.</p>
+            <p><b>Special</b>The Althing, founded in 930 CE, is among the world's oldest parliaments.</p>
+          </details>
+        </article>
+        <article class="card" data-r="south-america">
+          <header><span class="iso">PE</span><div><h3>Peru</h3><span class="region">South America</span></div></header>
+          <dl class="facts">
+            <div><dt>Capital</dt><dd>Lima</dd></div>
+            <div><dt>Population</dt><dd>≈ 34 million</dd></div>
+            <div class="wide"><dt>Famous landmark</dt><dd>Machu Picchu</dd></div>
+          </dl>
+          <details><summary>Facts and extras</summary>
+            <p><b>Fun fact</b>Machu Picchu is a 15th-century Inca citadel perched at about 2,430 m.</p>
+            <p><b>Special</b>Home to more than 3,000 varieties of potato.</p>
+          </details>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== COUNTRY CARDS ===================== -->
+  <section id="explore" class="explore">
+    <div class="wrap">
+      <header class="section-head">
+        <h2>Countries by region</h2>
+        <p>Pick a region or browse everything. Open “Facts and extras” on any card for a fun fact and something that makes the country special. Populations are rounded 2024 estimates.</p>
+      </header>
+
+      <!-- Region filter: radios drive the CSS, labels are the visible chips -->
+      <input class="sr" type="radio" name="region" id="r-all" checked>
+      <input class="sr" type="radio" name="region" id="r-africa">
+      <input class="sr" type="radio" name="region" id="r-asia">
+      <input class="sr" type="radio" name="region" id="r-europe">
+      <input class="sr" type="radio" name="region" id="r-north-america">
+      <input class="sr" type="radio" name="region" id="r-south-america">
+      <input class="sr" type="radio" name="region" id="r-oceania">
+
+      <nav class="chips" aria-label="Filter by region">
+        <label class="chip" for="r-all">All regions</label>
+        <label class="chip" data-r="africa" for="r-africa">Africa</label>
+        <label class="chip" data-r="asia" for="r-asia">Asia</label>
+        <label class="chip" data-r="europe" for="r-europe">Europe</label>
+        <label class="chip" data-r="north-america" for="r-north-america">North America</label>
+        <label class="chip" data-r="south-america" for="r-south-america">South America</label>
+        <label class="chip" data-r="oceania" for="r-oceania">Oceania</label>
+      </nav>
+
+      <div class="grid">
+
+        <!-- ---------- AFRICA ---------- -->
+        <article class="card" data-r="africa">
+          <header><span class="iso">NG</span><div><h3>Nigeria</h3><span class="region">Africa</span></div></header>
+          <dl class="facts">
+            <div><dt>Capital</dt><dd>Abuja</dd></div>
+            <div><dt>Population</dt><dd>≈ 230 million</dd></div>
+            <div class="wide"><dt>Famous landmark</dt><dd>Zuma Rock</dd></div>
+          </dl>
+          <details><summary>Facts and extras</summary>
+            <p><b>Fun fact</b>Africa's most populous country, with more than 500 languages spoken.</p>
+            <p><b>Special</b>Nollywood releases more films per year than Hollywood, and Lagos is one of the fastest-growing megacities on Earth.</p>
+          </details>
+        </article>
+
+        <article class="card" data-r="africa">
+          <header><span class="iso">EG</span><div><h3>Egypt</h3><span class="region">Africa</span></div></header>
+          <dl class="facts">
+            <div><dt>Capital</dt><dd>Cairo</dd></div>
+            <div><dt>Population</dt><dd>≈ 113 million</dd></div>
+            <div class="wide"><dt>Famous landmark</dt><dd>Pyramids of Giza</dd></div>
+          </dl>
+          <details><summary>Facts and extras</summary>
+            <p><b>Fun fact</b>The Great Pyramid stayed the tallest human-made structure for roughly 3,800 years.</p>
+            <p><b>Special</b>Transcontinental: the Sinai Peninsula lies in Asia. The Nile runs about 6,650 km, among the longest rivers in the world.</p>
+          </details>
+        </article>
+
+        <article class="card" data-r="africa">
+          <header><span class="iso">ZA</span><div><h3>South Africa</h3><span class="region">Africa</span></div></header>
+          <dl class="facts">
+            <div><dt>Capitals</dt><dd>Pretoria, Cape Town, Bloemfontein</dd></div>
+            <div><dt>Population</dt><dd>≈ 62 million</dd></div>
+            <div class="wide"><dt>Famous landmark</dt><dd>Table Mountain</dd></div>
+          </dl>
+          <details><summary>Facts and extras</summary>
+            <p><b>Fun fact</b>Three capitals share power: executive, legislative and judicial.</p>
+            <p><b>Special</b>Twelve official languages (South African Sign Language joined in 2023). The Cullinan diamond, the largest gem-quality rough diamond ever found at 3,106 carats, was mined here in 1905.</p>
+          </details>
+        </article>
+
+        <article class="card" data-r="africa">
+          <header><span class="iso">KE</span><div><h3>Kenya</h3><span class="region">Africa</span></div></header>
+          <dl class="facts">
+            <div><dt>Capital</dt><dd>Nairobi</dd></div>
+            <div><dt>Population</dt><dd>≈ 55 million</dd></div>
+            <div class="wide"><dt>Famous landmark</dt><dd>Maasai Mara</dd></div>
+          </dl>
+          <details><summary>Facts and extras</summary>
+            <p><b>Fun fact</b>The Great Migration brings over a million wildebeest across the Mara every year.</p>
+            <p><b>Special</b>Mount Kenya (5,199 m) is Africa's second-highest peak, and the country is famous for its world-class long-distance runners.</p>
+          </details>
+        </article>
+
+        <article class="card" data-r="africa">
+          <header><span class="iso">ET</span><div><h3>Ethiopia</h3><span class="region">Africa</span></div></header>
+          <dl class="facts">
+            <div><dt>Capital</dt><dd>Addis Ababa</dd></div>
+            <div><dt>Population</dt><dd>≈ 127 million</dd></div>
+            <div class="wide"><dt>Famous landmark</dt><dd>Rock-hewn churches of Lalibela</dd></div>
+          </dl>
+          <details><summary>Facts and extras</summary>
+            <p><b>Fun fact</b>Follows a 13-month calendar that runs about seven years behind the Gregorian one.</p>
+            <p><b>Special</b>Widely regarded as the birthplace of coffee (the Kaffa region). The 3.2-million-year-old hominin “Lucy” was discovered here in 1974.</p>
+          </details>
+        </article>
+
+        <article class="card" data-r="africa">
+          <header><span class="iso">MA</span><div><h3>Morocco</h3><span class="region">Africa</span></div></header>
+          <dl class="facts">
+            <div><dt>Capital</dt><dd>Rabat</dd></div>
+            <div><dt>Population</dt><dd>≈ 37 million</dd></div>
+            <div class="wide"><dt>Famous landmark</dt><dd>Hassan II Mosque, Casablanca</dd></div>
+          </dl>
+          <details><summary>Facts and extras</summary>
+            <p><b>Fun fact</b>Chefchaouen, the “Blue City”, paints its whole old town in shades of blue.</p>
+            <p><b>Special</b>The University of al-Qarawiyyin in Fez, founded in 859 CE, is among the oldest continuously operating universities in the world.</p>
+          </details>
+        </article>
+
+        <article class="card" data-r="africa">
+          <header><span class="iso">GH</span><div><h3>Ghana</h3><span class="region">Africa</span></div></header>
+          <dl class="facts">
+            <div><dt>Capital</dt><dd>Accra</dd></div>
+            <div><dt>Population</dt><dd>≈ 34 million</dd></div>
+            <div class="wide"><dt>Famous landmark</dt><dd>Cape Coast Castle</dd></div>
+          </dl>
+          <details><summary>Facts and extras</summary>
+            <p><b>Fun fact</b>In 1957 it became the first sub-Saharan country to win independence from colonial rule.</p>
+            <p><b>Special</b>The world's second-largest cocoa producer. Lake Volta is one of the largest reservoirs on Earth by surface area.</p>
+          </details>
+        </article>
+
+        <article class="card" data-r="africa">
+          <header><span class="iso">TZ</span><div><h3>Tanzania</h3><span class="region">Africa</span></div></header>
+          <dl class="facts">
+            <div><dt>Capital</dt><dd>Dodoma</dd></div>
+            <div><dt>Population</dt><dd>≈ 67 million</dd></div>
+            <div class="wide"><dt>Famous landmark</dt><dd>Mount Kilimanjaro</dd></div>
+          </dl>
+          <details><summary>Facts and extras</summary>
+            <p><b>Fun fact</b>Kilimanjaro (5,895 m) is Africa's highest point and the tallest free-standing mountain in the world.</p>
+            <p><b>Special</b>The Serengeti, Ngorongoro Crater and Zanzibar all lie here. The name blends “Tanganyika” and “Zanzibar”.</p>
+          </details>
+        </article>
+
+        <article class="card" data-r="africa">
+          <header><span class="iso">DZ</span><div><h3>Algeria</h3><span class="region">Africa</span></div></header>
+          <dl class="facts">
+            <div><dt>Capital</dt><dd>Algiers</dd></div>
+            <div><dt>Population</dt><dd>≈ 46 million</dd></div>
+            <div class="wide"><dt>Famous landmark</dt><dd>Tassili n'Ajjer</dd></div>
+          </dl>
+          <details><summary>Facts and extras</summary>
+            <p><b>Fun fact</b>The largest country in Africa by area, at about 2.38 million km².</p>
+            <p><b>Special</b>More than 80% of the land is Sahara. Tassili n'Ajjer holds over 15,000 prehistoric rock engravings and paintings.</p>
+          </details>
+        </article>
+
+        <article class="card" data-r="africa">
+          <header><span class="iso">MG</span><div><h3>Madagascar</h3><span class="region">Africa</span></div></header>
+          <dl class="facts">
+            <div><dt>Capital</dt><dd>Antananarivo</dd></div>
+            <div><dt>Population</dt><dd>≈ 31 million</dd></div>
+            <div class="wide"><dt>Famous landmark</dt><dd>Avenue of the Baobabs</dd></div>
+          </dl>
+          <details><summary>Facts and extras</summary>
+            <p><b>Fun fact</b>Around 90% of its wildlife, every lemur included, exists nowhere else on Earth.</p>
+            <p><b>Special</b>The world's fourth-largest island; it separated from the Indian landmass roughly 88 million years ago.</p>
+          </details>
+        </article>
+
+        <!-- ---------- ASIA ---------- -->
+        <article class="card" data-r="asia">
+          <header><span class="iso">CN</span><div><h3>China</h3><span class="region">Asia</span></div></header>
+          <dl class="facts">
+            <div><dt>Capital</dt><dd>Beijing</dd></div>
+            <div><dt>Population</dt><dd>≈ 1.41 billion</dd></div>
+            <div class="wide"><dt>Famous landmark</dt><dd>Great Wall of China</dd></div>
+          </dl>
+          <details><summary>Facts and extras</summary>
+            <p><b>Fun fact</b>All sections of the Great Wall combined stretch over 21,000 km.</p>
+            <p><b>Special</b>Runs on a single official time zone despite spanning five geographic ones. Home of paper, printing, gunpowder and the compass.</p>
+          </details>
+        </article>
+
+        <article class="card" data-r="asia">
+          <header><span class="iso">IN</span><div><h3>India</h3><span class="region">Asia</span></div></header>
+          <dl class="facts">
+            <div><dt>Capital</dt><dd>New Delhi</dd></div>
+            <div><dt>Population</dt><dd>≈ 1.43 billion</dd></div>
+            <div class="wide"><dt>Famous landmark</dt><dd>Taj Mahal</dd></div>
+          </dl>
+          <details><summary>Facts and extras</summary>
+            <p><b>Fun fact</b>Overtook China in 2023 to become the world's most populous country.</p>
+            <p><b>Special</b>Twenty-two scheduled languages. Chess descends from the ancient Indian game chaturanga, and the numeral zero was formalised here.</p>
+          </details>
+        </article>
+
+        <article class="card" data-r="asia">
+          <header><span class="iso">JP</span><div><h3>Japan</h3><span class="region">Asia</span></div></header>
+          <dl class="facts">
+            <div><dt>Capital</dt><dd>Tokyo</dd></div>
+            <div><dt>Population</dt><dd>≈ 124 million</dd></div>
+            <div class="wide"><dt>Famous landmark</dt><dd>Mount Fuji</dd></div>
+          </dl>
+          <details><summary>Facts and extras</summary>
+            <p><b>Fun fact</b>A 2023 recount found Japan has about 14,000 islands, double the old figure.</p>
+            <p><b>Special</b>Greater Tokyo, with around 37 million people, is the largest urban area on Earth. The Shinkansen bullet train has run since 1964.</p>
+          </details>
+        </article>
+
+        <article class="card" data-r="asia">
+          <header><span class="iso">ID</span><div><h3>Indonesia</h3><span class="region">Asia</span></div></header>
+          <dl class="facts">
+            <div><dt>Capital</dt><dd>Jakarta (Nusantara under construction)</dd></div>
+            <div><dt>Population</dt><dd>≈ 279 million</dd></div>
+            <div class="wide"><dt>Famous landmark</dt><dd>Borobudur</dd></div>
+          </dl>
+          <details><summary>Facts and extras</summary>
+            <p><b>Fun fact</b>The world's largest archipelago, with more than 17,000 islands.</p>
+            <p><b>Special</b>Home of the Komodo dragon, more than 700 living languages, and the largest Muslim-majority population.</p>
+          </details>
+        </article>
+
+        <article class="card" data-r="asia">
+          <header><span class="iso">PK</span><div><h3>Pakistan</h3><span class="region">Asia</span></div></header>
+          <dl class="facts">
+            <div><dt>Capital</dt><dd>Islamabad</dd></div>
+            <div><dt>Population</dt><dd>≈ 240 million</dd></div>
+            <div class="wide"><dt>Famous landmark</dt><dd>Badshahi Mosque, Lahore</dd></div>
+          </dl>
+          <details><summary>Facts and extras</summary>
+            <p><b>Fun fact</b>K2 (8,611 m), the world's second-highest mountain, rises in the Karakoram range.</p>
+            <p><b>Special</b>Cradle of the Indus Valley Civilisation (Mohenjo-daro). The Karakoram Highway is one of the highest paved international roads.</p>
+          </details>
+        </article>
+
+        <article class="card" data-r="asia">
+          <header><span class="iso">BD</span><div><h3>Bangladesh</h3><span class="region">Asia</span></div></header>
+          <dl class="facts">
+            <div><dt>Capital</dt><dd>Dhaka</dd></div>
+            <div><dt>Population</dt><dd>≈ 173 million</dd></div>
+            <div class="wide"><dt>Famous landmark</dt><dd>Sundarbans</dd></div>
+          </dl>
+          <details><summary>Facts and extras</summary>
+            <p><b>Fun fact</b>The Sundarbans is the world's largest mangrove forest and a Bengal tiger habitat.</p>
+            <p><b>Special</b>One of the most densely populated large countries. Cox's Bazar has one of the longest natural sea beaches, about 120 km.</p>
+          </details>
+        </article>
+
+        <article class="card" data-r="asia">
+          <header><span class="iso">NP</span><div><h3>Nepal</h3><span class="region">Asia</span></div></header>
+          <dl class="facts">
+            <div><dt>Capital</dt><dd>Kathmandu</dd></div>
+            <div><dt>Population</dt><dd>≈ 30 million</dd></div>
+            <div class="wide"><dt>Famous landmark</dt><dd>Mount Everest (Sagarmatha)</dd></div>
+          </dl>
+          <details><summary>Facts and extras</summary>
+            <p><b>Fun fact</b>Eight of the world's fourteen peaks above 8,000 m stand in Nepal.</p>
+            <p><b>Special</b>The only country with a non-rectangular national flag. Lumbini is the birthplace of the Buddha, and Nepal was never colonised.</p>
+          </details>
+        </article>
+
+        <article class="card" data-r="asia">
+          <header><span class="iso">KR</span><div><h3>South Korea</h3><span class="region">Asia</span></div></header>
+          <dl class="facts">
+            <div><dt>Capital</dt><dd>Seoul</dd></div>
+            <div><dt>Population</dt><dd>≈ 52 million</dd></div>
+            <div class="wide"><dt>Famous landmark</dt><dd>Gyeongbokgung Palace</dd></div>
+          </dl>
+          <details><summary>Facts and extras</summary>
+            <p><b>Fun fact</b>The Hangul alphabet was created in 1443 under King Sejong.</p>
+            <p><b>Special</b>Among the fastest internet speeds in the world. Jeju Island is a volcanic UNESCO site, and K-pop and K-dramas are global exports.</p>
+          </details>
+        </article>
+
+        <article class="card" data-r="asia">
+          <header><span class="iso">VN</span><div><h3>Vietnam</h3><span class="region">Asia</span></div></header>
+          <dl class="facts">
+            <div><dt>Capital</dt><dd>Hanoi</dd></div>
+            <div><dt>Population</dt><dd>≈ 99 million</dd></div>
+            <div class="wide"><dt>Famous landmark</dt><dd>Ha Long Bay</dd></div>
+          </dl>
+          <details><summary>Facts and extras</summary>
+            <p><b>Fun fact</b>Ha Long Bay contains about 1,600 limestone islands and islets.</p>
+            <p><b>Special</b>The second-largest coffee exporter on Earth. Son Doong is one of the largest known cave passages.</p>
+          </details>
+        </article>
+
+        <article class="card" data-r="asia">
+          <header><span class="iso">TH</span><div><h3>Thailand</h3><span class="region">Asia</span></div></header>
+          <dl class="facts">
+            <div><dt>Capital</dt><dd>Bangkok</dd></div>
+            <div><dt>Population</dt><dd>≈ 72 million</dd></div>
+            <div class="wide"><dt>Famous landmark</dt><dd>The Grand Palace</dd></div>
+          </dl>
+          <details><summary>Facts and extras</summary>
+            <p><b>Fun fact</b>The only Southeast Asian country never colonised by a European power.</p>
+            <p><b>Special</b>Bangkok's full ceremonial name runs to roughly 168 letters. The country has more than 40,000 Buddhist temples.</p>
+          </details>
+        </article>
+
+        <article class="card" data-r="asia">
+          <header><span class="iso">IR</span><div><h3>Iran</h3><span class="region">Asia</span></div></header>
+          <dl class="facts">
+            <div><dt>Capital</dt><dd>Tehran</dd></div>
+            <div><dt>Population</dt><dd>≈ 89 million</dd></div>
+            <div class="wide"><dt>Famous landmark</dt><dd>Persepolis</dd></div>
+          </dl>
+          <details><summary>Facts and extras</summary>
+            <p><b>Fun fact</b>One of the world's oldest continuous civilisations, heir to the Persian Empire.</p>
+            <p><b>Special</b>Nowruz, the Persian New Year, falls on the spring equinox. The Lut Desert has logged some of the hottest land-surface readings ever measured, around 70 °C.</p>
+          </details>
+        </article>
+
+        <article class="card" data-r="asia">
+          <header><span class="iso">SA</span><div><h3>Saudi Arabia</h3><span class="region">Asia</span></div></header>
+          <dl class="facts">
+            <div><dt>Capital</dt><dd>Riyadh</dd></div>
+            <div><dt>Population</dt><dd>≈ 36 million</dd></div>
+            <div class="wide"><dt>Famous landmark</dt><dd>Hegra (Mada'in Salih)</dd></div>
+          </dl>
+          <details><summary>Facts and extras</summary>
+            <p><b>Fun fact</b>The largest country in the world without a single permanent river.</p>
+            <p><b>Special</b>Guardian of Mecca and Medina, Islam's two holiest cities. The Rub' al Khali is the largest continuous sand desert on Earth.</p>
+          </details>
+        </article>
+
+        <article class="card" data-r="asia">
+          <header><span class="iso">TR</span><div><h3>Türkiye</h3><span class="region">Asia</span></div></header>
+          <dl class="facts">
+            <div><dt>Capital</dt><dd>Ankara</dd></div>
+            <div><dt>Population</dt><dd>≈ 85 million</dd></div>
+            <div class="wide"><dt>Famous landmark</dt><dd>Hagia Sophia</dd></div>
+          </dl>
+          <details><summary>Facts and extras</summary>
+            <p><b>Fun fact</b>Istanbul is the only major city that straddles two continents, Europe and Asia.</p>
+            <p><b>Special</b>Göbekli Tepe, more than 11,000 years old, is among the oldest monumental sites known. Tulips reached Europe by way of the Ottoman court.</p>
+          </details>
+        </article>
+
+        <article class="card" data-r="asia">
+          <header><span class="iso">PH</span><div><h3>Philippines</h3><span class="region">Asia</span></div></header>
+          <dl class="facts">
+            <div><dt>Capital</dt><dd>Manila</dd></div>
+            <div><dt>Population</dt><dd>≈ 117 million</dd></div>
+            <div class="wide"><dt>Famous landmark</dt><dd>Chocolate Hills, Bohol</dd></div>
+          </dl>
+          <details><summary>Facts and extras</summary>
+            <p><b>Fun fact</b>An archipelago of more than 7,600 islands.</p>
+            <p><b>Special</b>One of the world's largest English-speaking populations, a deep karaoke culture, and the colourful jeepney as a national icon.</p>
+          </details>
+        </article>
+
+        <article class="card" data-r="asia">
+          <header><span class="iso">LK</span><div><h3>Sri Lanka</h3><span class="region">Asia</span></div></header>
+          <dl class="facts">
+            <div><dt>Capital</dt><dd>Sri Jayawardenepura Kotte</dd></div>
+            <div><dt>Population</dt><dd>≈ 22 million</dd></div>
+            <div class="wide"><dt>Famous landmark</dt><dd>Sigiriya</dd></div>
+          </dl>
+          <details><summary>Facts and extras</summary>
+            <p><b>Fun fact</b>Sigiriya is a 5th-century rock fortress rising about 200 m above the plains.</p>
+            <p><b>Special</b>Elected the world's first female prime minister, Sirimavo Bandaranaike, in 1960. Famed for Ceylon tea and native cinnamon.</p>
+          </details>
+        </article>
+
+        <article class="card" data-r="asia">
+          <header><span class="iso">BT</span><div><h3>Bhutan</h3><span class="region">Asia</span></div></header>
+          <dl class="facts">
+            <div><dt>Capital</dt><dd>Thimphu</dd></div>
+            <div><dt>Population</dt><dd>≈ 780,000</dd></div>
+            <div class="wide"><dt>Famous landmark</dt><dd>Paro Taktsang (Tiger's Nest)</dd></div>
+          </dl>
+          <details><summary>Facts and extras</summary>
+            <p><b>Fun fact</b>Measures national progress with Gross National Happiness rather than GDP alone.</p>
+            <p><b>Special</b>Carbon negative, with a constitution that requires at least 60% forest cover. Thimphu has no traffic lights.</p>
+          </details>
+        </article>
+
+        <article class="card" data-r="asia">
+          <header><span class="iso">MN</span><div><h3>Mongolia</h3><span class="region">Asia</span></div></header>
+          <dl class="facts">
+            <div><dt>Capital</dt><dd>Ulaanbaatar</dd></div>
+            <div><dt>Population</dt><dd>≈ 3.5 million</dd></div>
+            <div class="wide"><dt>Famous landmark</dt><dd>Genghis Khan Equestrian Statue</dd></div>
+          </dl>
+          <details><summary>Facts and extras</summary>
+            <p><b>Fun fact</b>The least densely populated sovereign country, at about two people per km².</p>
+            <p><b>Special</b>Ulaanbaatar is the coldest national capital. The first confirmed dinosaur eggs were found in the Gobi in 1923.</p>
+          </details>
+        </article>
+
+        <!-- ---------- EUROPE ---------- -->
+        <article class="card" data-r="europe">
+          <header><span class="iso">GB</span><div><h3>United Kingdom</h3><span class="region">Europe</span></div></header>
+          <dl class="facts">
+            <div><dt>Capital</dt><dd>London</dd></div>
+            <div><dt>Population</dt><dd>≈ 68 million</dd></div>
+            <div class="wide"><dt>Famous landmark</dt><dd>Big Ben (Elizabeth Tower)</dd></div>
+          </dl>
+          <details><summary>Facts and extras</summary>
+            <p><b>Fun fact</b>“Big Ben” is the bell; the tower itself is Elizabeth Tower.</p>
+            <p><b>Special</b>Four constituent countries. The London Underground (1863) is the world's oldest underground railway, and Stonehenge predates the pyramids.</p>
+          </details>
+        </article>
+
+        <article class="card" data-r="europe">
+          <header><span class="iso">FR</span><div><h3>France</h3><span class="region">Europe</span></div></header>
+          <dl class="facts">
+            <div><dt>Capital</dt><dd>Paris</dd></div>
+            <div><dt>Population</dt><dd>≈ 68 million</dd></div>
+            <div class="wide"><dt>Famous landmark</dt><dd>Eiffel Tower</dd></div>
+          </dl>
+          <details><summary>Facts and extras</summary>
+            <p><b>Fun fact</b>Built for the 1889 World's Fair, the tower grows up to 15 cm taller in summer heat.</p>
+            <p><b>Special</b>The most visited country in the world. The Louvre is the largest art museum, and there are more than 1,000 varieties of cheese.</p>
+          </details>
+        </article>
+
+        <article class="card" data-r="europe">
+          <header><span class="iso">DE</span><div><h3>Germany</h3><span class="region">Europe</span></div></header>
+          <dl class="facts">
+            <div><dt>Capital</dt><dd>Berlin</dd></div>
+            <div><dt>Population</dt><dd>≈ 84 million</dd></div>
+            <div class="wide"><dt>Famous landmark</dt><dd>Brandenburg Gate</dd></div>
+          </dl>
+          <details><summary>Facts and extras</summary>
+            <p><b>Fun fact</b>Home to more than 20,000 castles.</p>
+            <p><b>Special</b>Long stretches of the Autobahn have no speed limit. Gutenberg's press (around 1440) started the printing revolution, and there are over 1,500 kinds of sausage.</p>
+          </details>
+        </article>
+
+        <article class="card" data-r="europe">
+          <header><span class="iso">IT</span><div><h3>Italy</h3><span class="region">Europe</span></div></header>
+          <dl class="facts">
+            <div><dt>Capital</dt><dd>Rome</dd></div>
+            <div><dt>Population</dt><dd>≈ 59 million</dd></div>
+            <div class="wide"><dt>Famous landmark</dt><dd>Colosseum</dd></div>
+          </dl>
+          <details><summary>Facts and extras</summary>
+            <p><b>Fun fact</b>Rome is over 2,700 years old, yet Italy as a unified state only dates to 1861.</p>
+            <p><b>Special</b>Among the countries with the most UNESCO World Heritage Sites. Venice is built across 118 small islands, and two microstates (Vatican City and San Marino) sit inside Italy.</p>
+          </details>
+        </article>
+
+        <article class="card" data-r="europe">
+          <header><span class="iso">ES</span><div><h3>Spain</h3><span class="region">Europe</span></div></header>
+          <dl class="facts">
+            <div><dt>Capital</dt><dd>Madrid</dd></div>
+            <div><dt>Population</dt><dd>≈ 48 million</dd></div>
+            <div class="wide"><dt>Famous landmark</dt><dd>Sagrada Família</dd></div>
+          </dl>
+          <details><summary>Facts and extras</summary>
+            <p><b>Fun fact</b>The Sagrada Família has been under construction since 1882.</p>
+            <p><b>Special</b>The second most visited country. Spanish is the second most spoken native language on Earth, and flamenco comes from Andalusia.</p>
+          </details>
+        </article>
+
+        <article class="card" data-r="europe">
+          <header><span class="iso">PT</span><div><h3>Portugal</h3><span class="region">Europe</span></div></header>
+          <dl class="facts">
+            <div><dt>Capital</dt><dd>Lisbon</dd></div>
+            <div><dt>Population</dt><dd>≈ 10.5 million</dd></div>
+            <div class="wide"><dt>Famous landmark</dt><dd>Belém Tower</dd></div>
+          </dl>
+          <details><summary>Facts and extras</summary>
+            <p><b>Fun fact</b>Its borders are among Europe's oldest, essentially fixed since 1249.</p>
+            <p><b>Special</b>Produces about half the world's cork. Bertrand in Lisbon (1732) is the oldest operating bookshop, and Portuguese is spoken by around 260 million people.</p>
+          </details>
+        </article>
+
+        <article class="card" data-r="europe">
+          <header><span class="iso">NL</span><div><h3>Netherlands</h3><span class="region">Europe</span></div></header>
+          <dl class="facts">
+            <div><dt>Capital</dt><dd>Amsterdam</dd></div>
+            <div><dt>Population</dt><dd>≈ 18 million</dd></div>
+            <div class="wide"><dt>Famous landmark</dt><dd>Kinderdijk windmills</dd></div>
+          </dl>
+          <details><summary>Facts and extras</summary>
+            <p><b>Fun fact</b>Roughly a quarter of the country lies below sea level.</p>
+            <p><b>Special</b>More bicycles than people and the tallest population on average. The Hague hosts the seat of government and the international courts.</p>
+          </details>
+        </article>
+
+        <article class="card" data-r="europe">
+          <header><span class="iso">CH</span><div><h3>Switzerland</h3><span class="region">Europe</span></div></header>
+          <dl class="facts">
+            <div><dt>Capital</dt><dd>Bern</dd></div>
+            <div><dt>Population</dt><dd>≈ 8.9 million</dd></div>
+            <div class="wide"><dt>Famous landmark</dt><dd>Matterhorn</dd></div>
+          </dl>
+          <details><summary>Facts and extras</summary>
+            <p><b>Fun fact</b>Four national languages: German, French, Italian and Romansh.</p>
+            <p><b>Special</b>Neutral since 1815. CERN sits near Geneva, and the Gotthard Base Tunnel (57 km) is the world's longest railway tunnel.</p>
+          </details>
+        </article>
+
+        <article class="card" data-r="europe">
+          <header><span class="iso">SE</span><div><h3>Sweden</h3><span class="region">Europe</span></div></header>
+          <dl class="facts">
+            <div><dt>Capital</dt><dd>Stockholm</dd></div>
+            <div><dt>Population</dt><dd>≈ 10.5 million</dd></div>
+            <div class="wide"><dt>Famous landmark</dt><dd>Vasa Museum</dd></div>
+          </dl>
+          <details><summary>Facts and extras</summary>
+            <p><b>Fun fact</b>Stockholm spreads across 14 islands linked by more than 50 bridges.</p>
+            <p><b>Special</b>Home of the Nobel Prizes (except Peace). Allemansrätten grants everyone the right to roam, and IKEA and Spotify were born here.</p>
+          </details>
+        </article>
+
+        <article class="card" data-r="europe">
+          <header><span class="iso">NO</span><div><h3>Norway</h3><span class="region">Europe</span></div></header>
+          <dl class="facts">
+            <div><dt>Capital</dt><dd>Oslo</dd></div>
+            <div><dt>Population</dt><dd>≈ 5.5 million</dd></div>
+            <div class="wide"><dt>Famous landmark</dt><dd>Geirangerfjord</dd></div>
+          </dl>
+          <details><summary>Facts and extras</summary>
+            <p><b>Fun fact</b>More than 1,000 fjords carve the coast, which, counting islands, runs about 100,000 km.</p>
+            <p><b>Special</b>Midnight sun north of the Arctic Circle, the highest electric-car share on the planet, and one of the largest sovereign wealth funds ever built.</p>
+          </details>
+        </article>
+
+        <article class="card" data-r="europe">
+          <header><span class="iso">PL</span><div><h3>Poland</h3><span class="region">Europe</span></div></header>
+          <dl class="facts">
+            <div><dt>Capital</dt><dd>Warsaw</dd></div>
+            <div><dt>Population</dt><dd>≈ 37 million</dd></div>
+            <div class="wide"><dt>Famous landmark</dt><dd>Wawel Castle, Kraków</dd></div>
+          </dl>
+          <details><summary>Facts and extras</summary>
+            <p><b>Fun fact</b>Warsaw's Old Town was rebuilt so faithfully after WWII that it became a UNESCO site.</p>
+            <p><b>Special</b>Birthplace of Copernicus, Marie Curie and Chopin. The Wieliczka Salt Mine has chapels carved entirely from salt.</p>
+          </details>
+        </article>
+
+        <article class="card" data-r="europe">
+          <header><span class="iso">GR</span><div><h3>Greece</h3><span class="region">Europe</span></div></header>
+          <dl class="facts">
+            <div><dt>Capital</dt><dd>Athens</dd></div>
+            <div><dt>Population</dt><dd>≈ 10.4 million</dd></div>
+            <div class="wide"><dt>Famous landmark</dt><dd>Acropolis of Athens</dd></div>
+          </dl>
+          <details><summary>Facts and extras</summary>
+            <p><b>Fun fact</b>Athenian democracy took shape around 508 BCE.</p>
+            <p><b>Special</b>About 6,000 islands, only around 227 inhabited. The ancient Olympic Games began at Olympia in 776 BCE, and roughly 80% of the land is mountainous.</p>
+          </details>
+        </article>
+
+        <article class="card" data-r="europe">
+          <header><span class="iso">RU</span><div><h3>Russia</h3><span class="region">Europe</span></div></header>
+          <dl class="facts">
+            <div><dt>Capital</dt><dd>Moscow</dd></div>
+            <div><dt>Population</dt><dd>≈ 144 million</dd></div>
+            <div class="wide"><dt>Famous landmark</dt><dd>Saint Basil's Cathedral</dd></div>
+          </dl>
+          <details><summary>Facts and extras</summary>
+            <p><b>Fun fact</b>The largest country by area (17.1 million km²), covering 11 time zones.</p>
+            <p><b>Special</b>Lake Baikal is the deepest lake (about 1,642 m) and holds around a fifth of the world's unfrozen fresh water. The Trans-Siberian Railway runs 9,289 km.</p>
+          </details>
+        </article>
+
+        <article class="card" data-r="europe">
+          <header><span class="iso">IE</span><div><h3>Ireland</h3><span class="region">Europe</span></div></header>
+          <dl class="facts">
+            <div><dt>Capital</dt><dd>Dublin</dd></div>
+            <div><dt>Population</dt><dd>≈ 5.3 million</dd></div>
+            <div class="wide"><dt>Famous landmark</dt><dd>Cliffs of Moher</dd></div>
+          </dl>
+          <details><summary>Facts and extras</summary>
+            <p><b>Fun fact</b>Halloween traces back to the Celtic festival of Samhain.</p>
+            <p><b>Special</b>Irish and English are both official. The Newgrange passage tomb is older than the Giza pyramids, and the Book of Kells dates to around 800 CE.</p>
+          </details>
+        </article>
+
+        <article class="card" data-r="europe">
+          <header><span class="iso">IS</span><div><h3>Iceland</h3><span class="region">Europe</span></div></header>
+          <dl class="facts">
+            <div><dt>Capital</dt><dd>Reykjavík</dd></div>
+            <div><dt>Population</dt><dd>≈ 390,000</dd></div>
+            <div class="wide"><dt>Famous landmark</dt><dd>Hallgrímskirkja</dd></div>
+          </dl>
+          <details><summary>Facts and extras</summary>
+            <p><b>Fun fact</b>One of the very few countries with no mosquitoes.</p>
+            <p><b>Special</b>The Althing (930 CE) is among the oldest parliaments in the world. Almost 100% of electricity is renewable, and there are around 130 volcanoes.</p>
+          </details>
+        </article>
+
+        <!-- ---------- NORTH AMERICA ---------- -->
+        <article class="card" data-r="north-america">
+          <header><span class="iso">US</span><div><h3>United States</h3><span class="region">North America</span></div></header>
+          <dl class="facts">
+            <div><dt>Capital</dt><dd>Washington, D.C.</dd></div>
+            <div><dt>Population</dt><dd>≈ 335 million</dd></div>
+            <div class="wide"><dt>Famous landmark</dt><dd>Statue of Liberty</dd></div>
+          </dl>
+          <details><summary>Facts and extras</summary>
+            <p><b>Fun fact</b>The Statue of Liberty was a gift from France, dedicated in 1886.</p>
+            <p><b>Special</b>Fifty states. Yellowstone (1872) was the world's first national park, and Alaska alone is larger than the next three biggest states combined.</p>
+          </details>
+        </article>
+
+        <article class="card" data-r="north-america">
+          <header><span class="iso">CA</span><div><h3>Canada</h3><span class="region">North America</span></div></header>
+          <dl class="facts">
+            <div><dt>Capital</dt><dd>Ottawa</dd></div>
+            <div><dt>Population</dt><dd>≈ 40 million</dd></div>
+            <div class="wide"><dt>Famous landmark</dt><dd>Niagara Falls</dd></div>
+          </dl>
+          <details><summary>Facts and extras</summary>
+            <p><b>Fun fact</b>The longest coastline of any country, about 243,000 km.</p>
+            <p><b>Special</b>More lakes than the rest of the world combined, two official languages, and the second-largest country by area.</p>
+          </details>
+        </article>
+
+        <article class="card" data-r="north-america">
+          <header><span class="iso">MX</span><div><h3>Mexico</h3><span class="region">North America</span></div></header>
+          <dl class="facts">
+            <div><dt>Capital</dt><dd>Mexico City</dd></div>
+            <div><dt>Population</dt><dd>≈ 129 million</dd></div>
+            <div class="wide"><dt>Famous landmark</dt><dd>Chichén Itzá</dd></div>
+          </dl>
+          <details><summary>Facts and extras</summary>
+            <p><b>Fun fact</b>The pyramid of Kukulcán has 365 steps, one for each day of the year.</p>
+            <p><b>Special</b>Chocolate, vanilla, corn and tomatoes were all domesticated in Mesoamerica. Sixty-eight indigenous languages are officially recognised, and the capital sits on a drained lakebed and is slowly sinking.</p>
+          </details>
+        </article>
+
+        <article class="card" data-r="north-america">
+          <header><span class="iso">CU</span><div><h3>Cuba</h3><span class="region">North America</span></div></header>
+          <dl class="facts">
+            <div><dt>Capital</dt><dd>Havana</dd></div>
+            <div><dt>Population</dt><dd>≈ 11 million</dd></div>
+            <div class="wide"><dt>Famous landmark</dt><dd>Old Havana</dd></div>
+          </dl>
+          <details><summary>Facts and extras</summary>
+            <p><b>Fun fact</b>The largest island in the Caribbean.</p>
+            <p><b>Special</b>Famous for 1950s American cars kept running for decades. The bee hummingbird, the world's smallest bird, lives only here.</p>
+          </details>
+        </article>
+
+        <article class="card" data-r="north-america">
+          <header><span class="iso">JM</span><div><h3>Jamaica</h3><span class="region">North America</span></div></header>
+          <dl class="facts">
+            <div><dt>Capital</dt><dd>Kingston</dd></div>
+            <div><dt>Population</dt><dd>≈ 2.8 million</dd></div>
+            <div class="wide"><dt>Famous landmark</dt><dd>Dunn's River Falls</dd></div>
+          </dl>
+          <details><summary>Facts and extras</summary>
+            <p><b>Fun fact</b>Birthplace of reggae and Bob Marley.</p>
+            <p><b>Special</b>A sprinting powerhouse (Usain Bolt). Blue Mountain coffee is among the priciest in the world, and Jamaica was the first Caribbean colony to gain independence from Britain, in 1962.</p>
+          </details>
+        </article>
+
+        <article class="card" data-r="north-america">
+          <header><span class="iso">GT</span><div><h3>Guatemala</h3><span class="region">North America</span></div></header>
+          <dl class="facts">
+            <div><dt>Capital</dt><dd>Guatemala City</dd></div>
+            <div><dt>Population</dt><dd>≈ 18 million</dd></div>
+            <div class="wide"><dt>Famous landmark</dt><dd>Tikal</dd></div>
+          </dl>
+          <details><summary>Facts and extras</summary>
+            <p><b>Fun fact</b>Tikal's Maya temples rise more than 70 m above the rainforest.</p>
+            <p><b>Special</b>Twenty-two Mayan languages are spoken. The quetzal is both the national bird and the currency, and Lake Atitlán fills a volcanic caldera.</p>
+          </details>
+        </article>
+
+        <article class="card" data-r="north-america">
+          <header><span class="iso">CR</span><div><h3>Costa Rica</h3><span class="region">North America</span></div></header>
+          <dl class="facts">
+            <div><dt>Capital</dt><dd>San José</dd></div>
+            <div><dt>Population</dt><dd>≈ 5.2 million</dd></div>
+            <div class="wide"><dt>Famous landmark</dt><dd>Arenal Volcano</dd></div>
+          </dl>
+          <details><summary>Facts and extras</summary>
+            <p><b>Fun fact</b>Holds about 5% of the world's biodiversity on 0.03% of its land.</p>
+            <p><b>Special</b>Abolished its army in 1948 and generates around 99% of its electricity from renewables. “Pura vida” is both a greeting and a philosophy.</p>
+          </details>
+        </article>
+
+        <article class="card" data-r="north-america">
+          <header><span class="iso">PA</span><div><h3>Panama</h3><span class="region">North America</span></div></header>
+          <dl class="facts">
+            <div><dt>Capital</dt><dd>Panama City</dd></div>
+            <div><dt>Population</dt><dd>≈ 4.5 million</dd></div>
+            <div class="wide"><dt>Famous landmark</dt><dd>Panama Canal</dd></div>
+          </dl>
+          <details><summary>Facts and extras</summary>
+            <p><b>Fun fact</b>The canal opened in 1914 and handles roughly 14,000 ship transits a year.</p>
+            <p><b>Special</b>The isthmus bends so that the sun rises over the Pacific and sets over the Atlantic. The “Panama hat” is actually made in Ecuador.</p>
+          </details>
+        </article>
+
+        <!-- ---------- SOUTH AMERICA ---------- -->
+        <article class="card" data-r="south-america">
+          <header><span class="iso">BR</span><div><h3>Brazil</h3><span class="region">South America</span></div></header>
+          <dl class="facts">
+            <div><dt>Capital</dt><dd>Brasília</dd></div>
+            <div><dt>Population</dt><dd>≈ 216 million</dd></div>
+            <div class="wide"><dt>Famous landmark</dt><dd>Christ the Redeemer</dd></div>
+          </dl>
+          <details><summary>Facts and extras</summary>
+            <p><b>Fun fact</b>Around 60% of the Amazon rainforest lies within Brazil.</p>
+            <p><b>Special</b>The largest Portuguese-speaking country. Brasília was planned and built in just four years (1956–60), and Brazil holds a record five FIFA World Cup titles.</p>
+          </details>
+        </article>
+
+        <article class="card" data-r="south-america">
+          <header><span class="iso">AR</span><div><h3>Argentina</h3><span class="region">South America</span></div></header>
+          <dl class="facts">
+            <div><dt>Capital</dt><dd>Buenos Aires</dd></div>
+            <div><dt>Population</dt><dd>≈ 46 million</dd></div>
+            <div class="wide"><dt>Famous landmark</dt><dd>Perito Moreno Glacier</dd></div>
+          </dl>
+          <details><summary>Facts and extras</summary>
+            <p><b>Fun fact</b>Aconcagua (6,961 m) is the highest peak outside Asia.</p>
+            <p><b>Special</b>Birthplace of tango. Ushuaia bills itself as the southernmost city, and the country's name comes from argentum, Latin for silver.</p>
+          </details>
+        </article>
+
+        <article class="card" data-r="south-america">
+          <header><span class="iso">CL</span><div><h3>Chile</h3><span class="region">South America</span></div></header>
+          <dl class="facts">
+            <div><dt>Capital</dt><dd>Santiago</dd></div>
+            <div><dt>Population</dt><dd>≈ 19.6 million</dd></div>
+            <div class="wide"><dt>Famous landmark</dt><dd>Torres del Paine</dd></div>
+          </dl>
+          <details><summary>Facts and extras</summary>
+            <p><b>Fun fact</b>The longest north-to-south country, stretching about 4,300 km.</p>
+            <p><b>Special</b>The Atacama is the driest non-polar desert. Easter Island (Rapa Nui) and its moai lie 3,500 km offshore, and Chile hosts the ALMA observatory.</p>
+          </details>
+        </article>
+
+        <article class="card" data-r="south-america">
+          <header><span class="iso">PE</span><div><h3>Peru</h3><span class="region">South America</span></div></header>
+          <dl class="facts">
+            <div><dt>Capital</dt><dd>Lima</dd></div>
+            <div><dt>Population</dt><dd>≈ 34 million</dd></div>
+            <div class="wide"><dt>Famous landmark</dt><dd>Machu Picchu</dd></div>
+          </dl>
+          <details><summary>Facts and extras</summary>
+            <p><b>Fun fact</b>Machu Picchu is a 15th-century Inca citadel perched at about 2,430 m.</p>
+            <p><b>Special</b>More than 3,000 potato varieties. Lake Titicaca is the highest navigable lake, and the Nazca Lines are best seen from the air.</p>
+          </details>
+        </article>
+
+        <article class="card" data-r="south-america">
+          <header><span class="iso">CO</span><div><h3>Colombia</h3><span class="region">South America</span></div></header>
+          <dl class="facts">
+            <div><dt>Capital</dt><dd>Bogotá</dd></div>
+            <div><dt>Population</dt><dd>≈ 52 million</dd></div>
+            <div class="wide"><dt>Famous landmark</dt><dd>Cartagena's Walled City</dd></div>
+          </dl>
+          <details><summary>Facts and extras</summary>
+            <p><b>Fun fact</b>The only South American country with both Pacific and Caribbean coastlines.</p>
+            <p><b>Special</b>More bird species than any other country (around 1,900). Source of most of the world's fine emeralds, and home to Caño Cristales, the “river of five colours”.</p>
+          </details>
+        </article>
+
+        <article class="card" data-r="south-america">
+          <header><span class="iso">VE</span><div><h3>Venezuela</h3><span class="region">South America</span></div></header>
+          <dl class="facts">
+            <div><dt>Capital</dt><dd>Caracas</dd></div>
+            <div><dt>Population</dt><dd>≈ 29 million</dd></div>
+            <div class="wide"><dt>Famous landmark</dt><dd>Angel Falls</dd></div>
+          </dl>
+          <details><summary>Facts and extras</summary>
+            <p><b>Fun fact</b>Angel Falls (979 m) is the tallest uninterrupted waterfall on Earth.</p>
+            <p><b>Special</b>Catatumbo lightning storms flash on 140 to 160 nights a year, and the country holds the world's largest proven oil reserves.</p>
+          </details>
+        </article>
+
+        <article class="card" data-r="south-america">
+          <header><span class="iso">EC</span><div><h3>Ecuador</h3><span class="region">South America</span></div></header>
+          <dl class="facts">
+            <div><dt>Capital</dt><dd>Quito</dd></div>
+            <div><dt>Population</dt><dd>≈ 18 million</dd></div>
+            <div class="wide"><dt>Famous landmark</dt><dd>Galápagos Islands</dd></div>
+          </dl>
+          <details><summary>Facts and extras</summary>
+            <p><b>Fun fact</b>Named after the equator, which crosses the country just north of Quito.</p>
+            <p><b>Special</b>Darwin's Galápagos observations shaped evolutionary theory. Chimborazo's summit is the farthest point from Earth's centre, and Ecuador is the true home of the Panama hat.</p>
+          </details>
+        </article>
+
+        <article class="card" data-r="south-america">
+          <header><span class="iso">BO</span><div><h3>Bolivia</h3><span class="region">South America</span></div></header>
+          <dl class="facts">
+            <div><dt>Capitals</dt><dd>Sucre (constitutional), La Paz (seat of government)</dd></div>
+            <div><dt>Population</dt><dd>≈ 12 million</dd></div>
+            <div class="wide"><dt>Famous landmark</dt><dd>Salar de Uyuni</dd></div>
+          </dl>
+          <details><summary>Facts and extras</summary>
+            <p><b>Fun fact</b>Salar de Uyuni is the world's largest salt flat, about 10,500 km².</p>
+            <p><b>Special</b>La Paz is the highest seat of government at around 3,600 m. Thirty-six official languages, and Lake Titicaca is shared with Peru.</p>
+          </details>
+        </article>
+
+        <!-- ---------- OCEANIA ---------- -->
+        <article class="card" data-r="oceania">
+          <header><span class="iso">AU</span><div><h3>Australia</h3><span class="region">Oceania</span></div></header>
+          <dl class="facts">
+            <div><dt>Capital</dt><dd>Canberra</dd></div>
+            <div><dt>Population</dt><dd>≈ 26.5 million</dd></div>
+            <div class="wide"><dt>Famous landmark</dt><dd>Sydney Opera House</dd></div>
+          </dl>
+          <details><summary>Facts and extras</summary>
+            <p><b>Fun fact</b>The Great Barrier Reef is the largest coral reef system and is visible from space.</p>
+            <p><b>Special</b>The only country that is also a continent. Kangaroos outnumber people, and Uluru is a sacred sandstone monolith.</p>
+          </details>
+        </article>
+
+        <article class="card" data-r="oceania">
+          <header><span class="iso">NZ</span><div><h3>New Zealand</h3><span class="region">Oceania</span></div></header>
+          <dl class="facts">
+            <div><dt>Capital</dt><dd>Wellington</dd></div>
+            <div><dt>Population</dt><dd>≈ 5.2 million</dd></div>
+            <div class="wide"><dt>Famous landmark</dt><dd>Milford Sound</dd></div>
+          </dl>
+          <details><summary>Facts and extras</summary>
+            <p><b>Fun fact</b>In 1893 it became the first self-governing country to give women the vote.</p>
+            <p><b>Special</b>Sheep outnumber people roughly five to one. Wellington is the southernmost capital, and there are no native land snakes.</p>
+          </details>
+        </article>
+
+        <article class="card" data-r="oceania">
+          <header><span class="iso">FJ</span><div><h3>Fiji</h3><span class="region">Oceania</span></div></header>
+          <dl class="facts">
+            <div><dt>Capital</dt><dd>Suva</dd></div>
+            <div><dt>Population</dt><dd>≈ 930,000</dd></div>
+            <div class="wide"><dt>Famous landmark</dt><dd>Sri Siva Subramaniya Temple, Nadi</dd></div>
+          </dl>
+          <details><summary>Facts and extras</summary>
+            <p><b>Fun fact</b>An archipelago of 333 islands, about 110 of them inhabited.</p>
+            <p><b>Special</b>Olympic rugby sevens champions in 2016 and 2020. Fire-walking is a Sawau tradition, and relaxed “Fiji time” is a way of life.</p>
+          </details>
+        </article>
+
+        <article class="card" data-r="oceania">
+          <header><span class="iso">PG</span><div><h3>Papua New Guinea</h3><span class="region">Oceania</span></div></header>
+          <dl class="facts">
+            <div><dt>Capital</dt><dd>Port Moresby</dd></div>
+            <div><dt>Population</dt><dd>≈ 10 million</dd></div>
+            <div class="wide"><dt>Famous landmark</dt><dd>Kokoda Track</dd></div>
+          </dl>
+          <details><summary>Facts and extras</summary>
+            <p><b>Fun fact</b>The most linguistically diverse country on Earth, with around 840 living languages.</p>
+            <p><b>Special</b>Home to most species of birds-of-paradise. Mount Wilhelm rises 4,509 m, and large areas remain barely explored.</p>
+          </details>
+        </article>
+
+        <article class="card" data-r="oceania">
+          <header><span class="iso">WS</span><div><h3>Samoa</h3><span class="region">Oceania</span></div></header>
+          <dl class="facts">
+            <div><dt>Capital</dt><dd>Apia</dd></div>
+            <div><dt>Population</dt><dd>≈ 220,000</dd></div>
+            <div class="wide"><dt>Famous landmark</dt><dd>To Sua Ocean Trench</dd></div>
+          </dl>
+          <details><summary>Facts and extras</summary>
+            <p><b>Fun fact</b>Skipped 30 December 2011 entirely by jumping west across the International Date Line.</p>
+            <p><b>Special</b>The word “tattoo” comes from the Samoan tatau. Robert Louis Stevenson spent his last years here and is buried above Apia.</p>
+          </details>
+        </article>
+
+      </div><!-- /.grid -->
+      <p class="count">Showing <b></b> countries</p>
+    </div>
+  </section>
+
+  <!-- ===================== QUIZ ===================== -->
+  <section id="quiz" class="quiz">
+    <div class="wrap">
+      <header class="section-head">
+        <h2>See what stuck</h2>
+        <p>Pick a category and choose an answer. You get instant feedback and a short explanation, and your score tallies as you go. Nothing is sent anywhere.</p>
+      </header>
+
+      <!-- Category tabs: radios drive the CSS, labels are the visible tabs -->
+      <input class="sr" type="radio" name="cat" id="c-cap" checked>
+      <input class="sr" type="radio" name="cat" id="c-geo">
+      <input class="sr" type="radio" name="cat" id="c-lm">
+      <input class="sr" type="radio" name="cat" id="c-cf">
+      <input class="sr" type="radio" name="cat" id="c-sm">
+
+      <nav class="tabs" aria-label="Quiz categories">
+        <label class="tab" for="c-cap">Capitals</label>
+        <label class="tab" for="c-geo">Geography</label>
+        <label class="tab" for="c-lm">Landmarks</label>
+        <label class="tab" for="c-cf">Culture &amp; facts</label>
+        <label class="tab" for="c-sm">Surprise me</label>
+      </nav>
+
+      <div class="panels">
+
+        <!-- ---------- CAPITALS ---------- -->
+        <form class="panel" id="p-cap">
+          <div class="panel-head"><h3>Capitals</h3><p>8 questions</p></div>
+
+          <fieldset class="q">
+            <legend>What is the capital of Australia?</legend>
+            <div class="opts">
+              <label class="opt"><input type="radio" name="cap1"><span>Sydney</span></label>
+              <label class="opt"><input type="radio" name="cap1"><span>Melbourne</span></label>
+              <label class="opt ok"><input type="radio" name="cap1"><span>Canberra</span></label>
+              <label class="opt"><input type="radio" name="cap1"><span>Perth</span></label>
+            </div>
+            <p class="why">Sydney is the largest city, but Canberra was purpose-built as a compromise capital; Parliament moved there in 1927.</p>
+          </fieldset>
+
+          <fieldset class="q">
+            <legend>What is the capital of Türkiye?</legend>
+            <div class="opts">
+              <label class="opt"><input type="radio" name="cap2"><span>Istanbul</span></label>
+              <label class="opt ok"><input type="radio" name="cap2"><span>Ankara</span></label>
+              <label class="opt"><input type="radio" name="cap2"><span>Izmir</span></label>
+              <label class="opt"><input type="radio" name="cap2"><span>Bursa</span></label>
+            </div>
+            <p class="why">Ankara became the capital in 1923 with the founding of the Republic. Istanbul is the largest city, not the capital.</p>
+          </fieldset>
+
+          <fieldset class="q">
+            <legend>What is the capital of Canada?</legend>
+            <div class="opts">
+              <label class="opt"><input type="radio" name="cap3"><span>Toronto</span></label>
+              <label class="opt"><input type="radio" name="cap3"><span>Montreal</span></label>
+              <label class="opt ok"><input type="radio" name="cap3"><span>Ottawa</span></label>
+              <label class="opt"><input type="radio" name="cap3"><span>Vancouver</span></label>
+            </div>
+            <p class="why">Queen Victoria chose Ottawa in 1857, partly for its safer distance from the US border.</p>
+          </fieldset>
+
+          <fieldset class="q">
+            <legend>Which country's official capital is Sri Jayawardenepura Kotte?</legend>
+            <div class="opts">
+              <label class="opt ok"><input type="radio" name="cap4"><span>Sri Lanka</span></label>
+              <label class="opt"><input type="radio" name="cap4"><span>Maldives</span></label>
+              <label class="opt"><input type="radio" name="cap4"><span>Bangladesh</span></label>
+              <label class="opt"><input type="radio" name="cap4"><span>Myanmar</span></label>
+            </div>
+            <p class="why">Colombo is Sri Lanka's commercial hub, but Parliament sits in nearby Sri Jayawardenepura Kotte.</p>
+          </fieldset>
+
+          <fieldset class="q">
+            <legend>What is the constitutional capital of Bolivia?</legend>
+            <div class="opts">
+              <label class="opt"><input type="radio" name="cap5"><span>La Paz</span></label>
+              <label class="opt ok"><input type="radio" name="cap5"><span>Sucre</span></label>
+              <label class="opt"><input type="radio" name="cap5"><span>Santa Cruz</span></label>
+              <label class="opt"><input type="radio" name="cap5"><span>Cochabamba</span></label>
+            </div>
+            <p class="why">Sucre is the constitutional capital; La Paz is the seat of government, which is why both appear on Bolivia's card.</p>
+          </fieldset>
+
+          <fieldset class="q">
+            <legend>What is the capital of Nepal?</legend>
+            <div class="opts">
+              <label class="opt"><input type="radio" name="cap6"><span>Pokhara</span></label>
+              <label class="opt"><input type="radio" name="cap6"><span>Lalitpur</span></label>
+              <label class="opt ok"><input type="radio" name="cap6"><span>Kathmandu</span></label>
+              <label class="opt"><input type="radio" name="cap6"><span>Biratnagar</span></label>
+            </div>
+            <p class="why">Kathmandu sits in a valley that also holds seven UNESCO World Heritage monument zones.</p>
+          </fieldset>
+
+          <fieldset class="q">
+            <legend>What is the capital of Switzerland?</legend>
+            <div class="opts">
+              <label class="opt"><input type="radio" name="cap7"><span>Zürich</span></label>
+              <label class="opt"><input type="radio" name="cap7"><span>Geneva</span></label>
+              <label class="opt ok"><input type="radio" name="cap7"><span>Bern</span></label>
+              <label class="opt"><input type="radio" name="cap7"><span>Basel</span></label>
+            </div>
+            <p class="why">Bern is the federal city and seat of government. Zürich is the largest city, Geneva the most international.</p>
+          </fieldset>
+
+          <fieldset class="q">
+            <legend>Which country has three capital cities?</legend>
+            <div class="opts">
+              <label class="opt"><input type="radio" name="cap8"><span>Nigeria</span></label>
+              <label class="opt ok"><input type="radio" name="cap8"><span>South Africa</span></label>
+              <label class="opt"><input type="radio" name="cap8"><span>Malaysia</span></label>
+              <label class="opt"><input type="radio" name="cap8"><span>Chile</span></label>
+            </div>
+            <p class="why">Pretoria (executive), Cape Town (legislative) and Bloemfontein (judicial) split the roles.</p>
+          </fieldset>
+
+          <div class="result">
+            <p class="score"></p>
+            <p class="done">All eight answered. Reset to try again.</p>
+            <button class="btn quiet" type="reset">Reset quiz</button>
+          </div>
+        </form>
+
+        <!-- ---------- GEOGRAPHY ---------- -->
+        <form class="panel" id="p-geo">
+          <div class="panel-head"><h3>Geography</h3><p>8 questions</p></div>
+
+          <fieldset class="q">
+            <legend>Which is the largest country by land area?</legend>
+            <div class="opts">
+              <label class="opt"><input type="radio" name="geo1"><span>Canada</span></label>
+              <label class="opt"><input type="radio" name="geo1"><span>China</span></label>
+              <label class="opt ok"><input type="radio" name="geo1"><span>Russia</span></label>
+              <label class="opt"><input type="radio" name="geo1"><span>United States</span></label>
+            </div>
+            <p class="why">Russia covers about 17.1 million km² and 11 time zones. Canada is second.</p>
+          </fieldset>
+
+          <fieldset class="q">
+            <legend>Which country is the longest from north to south?</legend>
+            <div class="opts">
+              <label class="opt"><input type="radio" name="geo2"><span>Argentina</span></label>
+              <label class="opt ok"><input type="radio" name="geo2"><span>Chile</span></label>
+              <label class="opt"><input type="radio" name="geo2"><span>Norway</span></label>
+              <label class="opt"><input type="radio" name="geo2"><span>Vietnam</span></label>
+            </div>
+            <p class="why">Chile stretches roughly 4,300 km from the Atacama to Patagonia while averaging under 180 km wide.</p>
+          </fieldset>
+
+          <fieldset class="q">
+            <legend>Which is the tallest free-standing mountain in the world?</legend>
+            <div class="opts">
+              <label class="opt"><input type="radio" name="geo3"><span>Mount Fuji</span></label>
+              <label class="opt"><input type="radio" name="geo3"><span>Aconcagua</span></label>
+              <label class="opt ok"><input type="radio" name="geo3"><span>Kilimanjaro</span></label>
+              <label class="opt"><input type="radio" name="geo3"><span>Mount Kenya</span></label>
+            </div>
+            <p class="why">Kilimanjaro rises 5,895 m on its own rather than as part of a range, which is what “free-standing” means.</p>
+          </fieldset>
+
+          <fieldset class="q">
+            <legend>Which lake is the deepest on Earth?</legend>
+            <div class="opts">
+              <label class="opt"><input type="radio" name="geo4"><span>Lake Superior</span></label>
+              <label class="opt"><input type="radio" name="geo4"><span>Lake Tanganyika</span></label>
+              <label class="opt ok"><input type="radio" name="geo4"><span>Lake Baikal</span></label>
+              <label class="opt"><input type="radio" name="geo4"><span>Lake Titicaca</span></label>
+            </div>
+            <p class="why">Baikal, in Siberia, reaches about 1,642 m and holds roughly a fifth of the world's unfrozen fresh water.</p>
+          </fieldset>
+
+          <fieldset class="q">
+            <legend>Which country has the only non-rectangular national flag?</legend>
+            <div class="opts">
+              <label class="opt"><input type="radio" name="geo5"><span>Bhutan</span></label>
+              <label class="opt ok"><input type="radio" name="geo5"><span>Nepal</span></label>
+              <label class="opt"><input type="radio" name="geo5"><span>Switzerland</span></label>
+              <label class="opt"><input type="radio" name="geo5"><span>Vatican City</span></label>
+            </div>
+            <p class="why">Nepal's flag is two stacked pennants. Switzerland's and Vatican City's flags are square, which is still a rectangle.</p>
+          </fieldset>
+
+          <fieldset class="q">
+            <legend>Which country has the largest population?</legend>
+            <div class="opts">
+              <label class="opt"><input type="radio" name="geo6"><span>China</span></label>
+              <label class="opt ok"><input type="radio" name="geo6"><span>India</span></label>
+              <label class="opt"><input type="radio" name="geo6"><span>United States</span></label>
+              <label class="opt"><input type="radio" name="geo6"><span>Indonesia</span></label>
+            </div>
+            <p class="why">India passed China in 2023 and now has around 1.43 billion people.</p>
+          </fieldset>
+
+          <fieldset class="q">
+            <legend>K2, the world's second-highest mountain, rises in which country's Karakoram range?</legend>
+            <div class="opts">
+              <label class="opt"><input type="radio" name="geo7"><span>Nepal</span></label>
+              <label class="opt ok"><input type="radio" name="geo7"><span>Pakistan</span></label>
+              <label class="opt"><input type="radio" name="geo7"><span>Bhutan</span></label>
+              <label class="opt"><input type="radio" name="geo7"><span>Afghanistan</span></label>
+            </div>
+            <p class="why">K2 (8,611 m) stands on the Pakistan–China border and is almost always climbed from the Pakistani side.</p>
+          </fieldset>
+
+          <fieldset class="q">
+            <legend>Which country has more lakes than the rest of the world combined?</legend>
+            <div class="opts">
+              <label class="opt"><input type="radio" name="geo8"><span>Finland</span></label>
+              <label class="opt"><input type="radio" name="geo8"><span>Russia</span></label>
+              <label class="opt ok"><input type="radio" name="geo8"><span>Canada</span></label>
+              <label class="opt"><input type="radio" name="geo8"><span>United States</span></label>
+            </div>
+            <p class="why">Canada has roughly two million lakes; fresh water covers close to 9% of its territory.</p>
+          </fieldset>
+
+          <div class="result">
+            <p class="score"></p>
+            <p class="done">All eight answered. Reset to try again.</p>
+            <button class="btn quiet" type="reset">Reset quiz</button>
+          </div>
+        </form>
+
+        <!-- ---------- LANDMARKS ---------- -->
+        <form class="panel" id="p-lm">
+          <div class="panel-head"><h3>Landmarks</h3><p>6 questions</p></div>
+
+          <fieldset class="q">
+            <legend>Machu Picchu is in which country?</legend>
+            <div class="opts">
+              <label class="opt"><input type="radio" name="lm1"><span>Bolivia</span></label>
+              <label class="opt ok"><input type="radio" name="lm1"><span>Peru</span></label>
+              <label class="opt"><input type="radio" name="lm1"><span>Ecuador</span></label>
+              <label class="opt"><input type="radio" name="lm1"><span>Colombia</span></label>
+            </div>
+            <p class="why">The Inca citadel sits above the Urubamba valley in Peru, about 80 km from Cusco.</p>
+          </fieldset>
+
+          <fieldset class="q">
+            <legend>Angel Falls, the tallest waterfall on Earth, is in which country?</legend>
+            <div class="opts">
+              <label class="opt"><input type="radio" name="lm2"><span>Brazil</span></label>
+              <label class="opt ok"><input type="radio" name="lm2"><span>Venezuela</span></label>
+              <label class="opt"><input type="radio" name="lm2"><span>Guyana</span></label>
+              <label class="opt"><input type="radio" name="lm2"><span>Colombia</span></label>
+            </div>
+            <p class="why">It drops 979 m from Auyán-tepui in Venezuela's Canaima National Park.</p>
+          </fieldset>
+
+          <fieldset class="q">
+            <legend>Borobudur, the world's largest Buddhist temple, is in which country?</legend>
+            <div class="opts">
+              <label class="opt"><input type="radio" name="lm3"><span>Thailand</span></label>
+              <label class="opt"><input type="radio" name="lm3"><span>Cambodia</span></label>
+              <label class="opt ok"><input type="radio" name="lm3"><span>Indonesia</span></label>
+              <label class="opt"><input type="radio" name="lm3"><span>Myanmar</span></label>
+            </div>
+            <p class="why">Borobudur is a 9th-century temple in Central Java, Indonesia.</p>
+          </fieldset>
+
+          <fieldset class="q">
+            <legend>The cliffside Tiger's Nest monastery (Paro Taktsang) is in which country?</legend>
+            <div class="opts">
+              <label class="opt"><input type="radio" name="lm4"><span>Nepal</span></label>
+              <label class="opt ok"><input type="radio" name="lm4"><span>Bhutan</span></label>
+              <label class="opt"><input type="radio" name="lm4"><span>Sri Lanka</span></label>
+              <label class="opt"><input type="radio" name="lm4"><span>Myanmar</span></label>
+            </div>
+            <p class="why">It clings to a cliff about 900 m above the Paro valley in Bhutan.</p>
+          </fieldset>
+
+          <fieldset class="q">
+            <legend>Salar de Uyuni, the largest salt flat, is in which country?</legend>
+            <div class="opts">
+              <label class="opt"><input type="radio" name="lm5"><span>Chile</span></label>
+              <label class="opt"><input type="radio" name="lm5"><span>Argentina</span></label>
+              <label class="opt ok"><input type="radio" name="lm5"><span>Bolivia</span></label>
+              <label class="opt"><input type="radio" name="lm5"><span>Peru</span></label>
+            </div>
+            <p class="why">The salt flat covers about 10,500 km² of Bolivia's southwest and turns into a giant mirror after rain.</p>
+          </fieldset>
+
+          <fieldset class="q">
+            <legend>Hagia Sophia is in which country?</legend>
+            <div class="opts">
+              <label class="opt"><input type="radio" name="lm6"><span>Greece</span></label>
+              <label class="opt ok"><input type="radio" name="lm6"><span>Türkiye</span></label>
+              <label class="opt"><input type="radio" name="lm6"><span>Egypt</span></label>
+              <label class="opt"><input type="radio" name="lm6"><span>Iran</span></label>
+            </div>
+            <p class="why">Built in Constantinople in 537 CE, it stands in modern Istanbul, Türkiye.</p>
+          </fieldset>
+
+          <div class="result">
+            <p class="score"></p>
+            <p class="done">All six answered. Reset to try again.</p>
+            <button class="btn quiet" type="reset">Reset quiz</button>
+          </div>
+        </form>
+
+        <!-- ---------- CULTURE & FACTS ---------- -->
+        <form class="panel" id="p-cf">
+          <div class="panel-head"><h3>Culture &amp; facts</h3><p>6 questions</p></div>
+
+          <fieldset class="q">
+            <legend>Which country is widely regarded as the birthplace of coffee?</legend>
+            <div class="opts">
+              <label class="opt"><input type="radio" name="cf1"><span>Colombia</span></label>
+              <label class="opt"><input type="radio" name="cf1"><span>Brazil</span></label>
+              <label class="opt ok"><input type="radio" name="cf1"><span>Ethiopia</span></label>
+              <label class="opt"><input type="radio" name="cf1"><span>Kenya</span></label>
+            </div>
+            <p class="why">The coffee plant is native to Ethiopia's Kaffa region; Brazil and Colombia became major growers much later.</p>
+          </fieldset>
+
+          <fieldset class="q">
+            <legend>Which was the first self-governing country to give women the vote, in 1893?</legend>
+            <div class="opts">
+              <label class="opt"><input type="radio" name="cf2"><span>Finland</span></label>
+              <label class="opt ok"><input type="radio" name="cf2"><span>New Zealand</span></label>
+              <label class="opt"><input type="radio" name="cf2"><span>United States</span></label>
+              <label class="opt"><input type="radio" name="cf2"><span>Norway</span></label>
+            </div>
+            <p class="why">New Zealand led in 1893. Finland followed in 1906 as the first in Europe.</p>
+          </fieldset>
+
+          <fieldset class="q">
+            <legend>Which country abolished its army in 1948?</legend>
+            <div class="opts">
+              <label class="opt"><input type="radio" name="cf3"><span>Panama</span></label>
+              <label class="opt ok"><input type="radio" name="cf3"><span>Costa Rica</span></label>
+              <label class="opt"><input type="radio" name="cf3"><span>Iceland</span></label>
+              <label class="opt"><input type="radio" name="cf3"><span>Japan</span></label>
+            </div>
+            <p class="why">Costa Rica disbanded its military after its 1948 civil war and redirected the budget to education and health.</p>
+          </fieldset>
+
+          <fieldset class="q">
+            <legend>Which country has around 840 living languages, the most of any nation?</legend>
+            <div class="opts">
+              <label class="opt"><input type="radio" name="cf4"><span>India</span></label>
+              <label class="opt"><input type="radio" name="cf4"><span>Indonesia</span></label>
+              <label class="opt ok"><input type="radio" name="cf4"><span>Papua New Guinea</span></label>
+              <label class="opt"><input type="radio" name="cf4"><span>Nigeria</span></label>
+            </div>
+            <p class="why">Papua New Guinea's rugged terrain kept communities isolated, so languages multiplied. Indonesia and Nigeria each have several hundred.</p>
+          </fieldset>
+
+          <fieldset class="q">
+            <legend>Which country measures progress with Gross National Happiness?</legend>
+            <div class="opts">
+              <label class="opt"><input type="radio" name="cf5"><span>Nepal</span></label>
+              <label class="opt ok"><input type="radio" name="cf5"><span>Bhutan</span></label>
+              <label class="opt"><input type="radio" name="cf5"><span>Denmark</span></label>
+              <label class="opt"><input type="radio" name="cf5"><span>Sri Lanka</span></label>
+            </div>
+            <p class="why">Bhutan coined the term in the 1970s and later wrote it into its constitution.</p>
+          </fieldset>
+
+          <fieldset class="q">
+            <legend>Which country skipped 30 December 2011 entirely?</legend>
+            <div class="opts">
+              <label class="opt"><input type="radio" name="cf6"><span>Fiji</span></label>
+              <label class="opt ok"><input type="radio" name="cf6"><span>Samoa</span></label>
+              <label class="opt"><input type="radio" name="cf6"><span>Tonga</span></label>
+              <label class="opt"><input type="radio" name="cf6"><span>Kiribati</span></label>
+            </div>
+            <p class="why">Samoa moved west across the International Date Line to align its week with Australia and New Zealand, its main trading partners.</p>
+          </fieldset>
+
+          <div class="result">
+            <p class="score"></p>
+            <p class="done">All six answered. Reset to try again.</p>
+            <button class="btn quiet" type="reset">Reset quiz</button>
+          </div>
+        </form>
+
+        <!-- ---------- SURPRISE ME ---------- -->
+        <form class="panel" id="p-sm">
+          <div class="panel-head"><h3>Surprise me</h3><p>8 mixed questions</p></div>
+
+          <fieldset class="q">
+            <legend>Which is the coldest national capital in the world?</legend>
+            <div class="opts">
+              <label class="opt"><input type="radio" name="sm1"><span>Moscow</span></label>
+              <label class="opt"><input type="radio" name="sm1"><span>Ottawa</span></label>
+              <label class="opt ok"><input type="radio" name="sm1"><span>Ulaanbaatar</span></label>
+              <label class="opt"><input type="radio" name="sm1"><span>Reykjavík</span></label>
+            </div>
+            <p class="why">Ulaanbaatar's average annual temperature is below freezing; January nights regularly drop past −30 °C.</p>
+          </fieldset>
+
+          <fieldset class="q">
+            <legend>Which country has no mosquitoes?</legend>
+            <div class="opts">
+              <label class="opt"><input type="radio" name="sm2"><span>Norway</span></label>
+              <label class="opt ok"><input type="radio" name="sm2"><span>Iceland</span></label>
+              <label class="opt"><input type="radio" name="sm2"><span>New Zealand</span></label>
+              <label class="opt"><input type="radio" name="sm2"><span>Ireland</span></label>
+            </div>
+            <p class="why">Iceland's freeze-thaw cycles seem to interrupt the mosquito life cycle. Its Nordic neighbours have plenty.</p>
+          </fieldset>
+
+          <fieldset class="q">
+            <legend>Which is the largest island in the Caribbean?</legend>
+            <div class="opts">
+              <label class="opt"><input type="radio" name="sm3"><span>Jamaica</span></label>
+              <label class="opt"><input type="radio" name="sm3"><span>Puerto Rico</span></label>
+              <label class="opt ok"><input type="radio" name="sm3"><span>Cuba</span></label>
+              <label class="opt"><input type="radio" name="sm3"><span>Trinidad</span></label>
+            </div>
+            <p class="why">Cuba is about ten times the size of Jamaica.</p>
+          </fieldset>
+
+          <fieldset class="q">
+            <legend>Chocolate and vanilla were first domesticated in which country?</legend>
+            <div class="opts">
+              <label class="opt ok"><input type="radio" name="sm4"><span>Mexico</span></label>
+              <label class="opt"><input type="radio" name="sm4"><span>Brazil</span></label>
+              <label class="opt"><input type="radio" name="sm4"><span>Ghana</span></label>
+              <label class="opt"><input type="radio" name="sm4"><span>Madagascar</span></label>
+            </div>
+            <p class="why">Both come from Mesoamerica. Ghana and Madagascar are today's big producers, not the origin.</p>
+          </fieldset>
+
+          <fieldset class="q">
+            <legend>Which country has more bicycles than people?</legend>
+            <div class="opts">
+              <label class="opt"><input type="radio" name="sm5"><span>Denmark</span></label>
+              <label class="opt ok"><input type="radio" name="sm5"><span>Netherlands</span></label>
+              <label class="opt"><input type="radio" name="sm5"><span>Germany</span></label>
+              <label class="opt"><input type="radio" name="sm5"><span>Japan</span></label>
+            </div>
+            <p class="why">The Netherlands has roughly 23 million bicycles for about 18 million people.</p>
+          </fieldset>
+
+          <fieldset class="q">
+            <legend>Where is the “Panama hat” actually made?</legend>
+            <div class="opts">
+              <label class="opt"><input type="radio" name="sm6"><span>Panama</span></label>
+              <label class="opt"><input type="radio" name="sm6"><span>Colombia</span></label>
+              <label class="opt ok"><input type="radio" name="sm6"><span>Ecuador</span></label>
+              <label class="opt"><input type="radio" name="sm6"><span>Peru</span></label>
+            </div>
+            <p class="why">The hats are woven from toquilla straw in Ecuador; they got the name because they were shipped through Panama.</p>
+          </fieldset>
+
+          <fieldset class="q">
+            <legend>Which country produces about half the world's cork?</legend>
+            <div class="opts">
+              <label class="opt"><input type="radio" name="sm7"><span>Spain</span></label>
+              <label class="opt ok"><input type="radio" name="sm7"><span>Portugal</span></label>
+              <label class="opt"><input type="radio" name="sm7"><span>Italy</span></label>
+              <label class="opt"><input type="radio" name="sm7"><span>Morocco</span></label>
+            </div>
+            <p class="why">Portugal's cork oak forests supply around half of global output; Spain is the second-largest producer.</p>
+          </fieldset>
+
+          <fieldset class="q">
+            <legend>The Lut Desert, with land-surface readings near 70 °C, is in which country?</legend>
+            <div class="opts">
+              <label class="opt"><input type="radio" name="sm8"><span>Saudi Arabia</span></label>
+              <label class="opt ok"><input type="radio" name="sm8"><span>Iran</span></label>
+              <label class="opt"><input type="radio" name="sm8"><span>Algeria</span></label>
+              <label class="opt"><input type="radio" name="sm8"><span>Australia</span></label>
+            </div>
+            <p class="why">Satellite measurements of Iran's Dasht-e Lut have recorded some of the hottest ground temperatures on Earth.</p>
+          </fieldset>
+
+          <div class="result">
+            <p class="score"></p>
+            <p class="done">All eight answered. Reset to try again.</p>
+            <button class="btn quiet" type="reset">Reset quiz</button>
+          </div>
+        </form>
+
+      </div><!-- /.panels -->
+    </div>
+  </section>
+
+  <!-- ===================== ABOUT ===================== -->
+  <section id="about" class="about">
+    <div class="wrap">
+      <header class="section-head">
+        <h2>How this site works</h2>
+        <p>Two files, no JavaScript, no external assets. It works offline and loads instantly.</p>
+      </header>
+      <div class="cols">
+        <div>
+          <h3>Built from two files</h3>
+          <p>Everything is <code>index.html</code> and <code>style.css</code>. Region filters, quiz tabs, answer feedback and the running score use radio inputs with <code>:checked</code>, <code>:has()</code> and CSS counters. Cards use <code>content-visibility: auto</code>, so off-screen cards skip layout and paint.</p>
+        </div>
+        <div>
+          <h3>Adding a country</h3>
+          <p>Copy any <code>&lt;article class="card"&gt;</code>, set <code>data-r</code> to its region and fill in the fields. The “Showing N countries” count updates on its own.</p>
+        </div>
+        <div>
+          <h3>Adding a question</h3>
+          <p>Duplicate a <code>&lt;fieldset class="q"&gt;</code>, give its radios a new shared <code>name</code>, and put <code>class="opt ok"</code> on the correct option. Numbering and scoring adjust automatically.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p>Worldbook. Populations are rounded 2024 estimates; facts are drawn from standard reference sources.</p>
+    <a href="#top">Back to top</a>
+  </div>
+</footer>
+
+</body>
+</html> 
