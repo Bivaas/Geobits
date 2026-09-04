@@ -11,13 +11,13 @@
   --ink: #16283a;          /* atlas print ink */
   --ink-soft: #55677a;
   --grat: #d6dfe7;         /* graticule: rules, borders, grid lines */
-  --ocean: #1d6fa5;        /* primary interactive colour */
-  --ocean-deep: #134b70;
+  --ocean: #1a7f6e;        /* primary interactive colour */
+  --ocean-deep: #115a4e;
   --ocean-mist: #e4eff7;
   --ok: #1f7a45;  --ok-bg: #e1f2e6;
   --no: #b23a30;  --no-bg: #fbe4e1;
 
-  --serif: Charter, "Bitstream Charter", "Sitka Text", Cambria, "Noto Serif", Georgia, serif;
+  --serif: Georgia, Charter, "Bitstream Charter", "Sitka Text", Cambria, "Noto Serif", serif;
   --sans: "Segoe UI Variable Text", "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", Arial, sans-serif;
 
   --r-card: 10px;
@@ -140,7 +140,7 @@ a:focus-visible, .btn:focus-visible, summary:focus-visible {
 .explore { padding: 3.5rem 0 4.5rem; counter-reset: shown; }
 .explore .wrap {
   display: grid; grid-template-columns: minmax(0, 1fr) auto;
-  grid-template-areas: "head head" "chips count" "grid grid";
+  grid-template-areas: "head head" "chips count" "progress progress" "chips count" "grid grid" "empty empty";
   column-gap: 1rem; align-items: center;
 }
 .explore .section-head { grid-area: head; }
@@ -218,7 +218,7 @@ a:focus-visible, .btn:focus-visible, summary:focus-visible {
 .card:hover { border-color: var(--tone); }
 .card > header { display: flex; align-items: center; gap: .8rem; }
 .iso {
-  flex: none; width: 46px; height: 46px; border-radius: 8px;
+  flex: none; width: 46px; height: 46px; border-radius: 50%;
   background: var(--fill); color: var(--tone);
   display: grid; place-items: center;
   font: 600 .85rem/1 var(--sans); letter-spacing: .06em;
@@ -359,7 +359,7 @@ a:focus-visible, .btn:focus-visible, summary:focus-visible {
   .hero .wrap { grid-template-columns: 1fr; gap: 2.25rem; padding: 3.5rem 0 3rem; }
   .deck { min-height: 380px; max-width: 460px; }
   .section-head { grid-template-columns: 1fr; }
-  .explore .wrap { grid-template-columns: 1fr; grid-template-areas: "head" "chips" "count" "grid"; }
+  .explore .wrap { grid-template-columns: 1fr; grid-template-areas: "head" "tools" "progress" "chips" "count" "grid" "empty"; }
   .count { margin-top: .6rem; }
   .about .cols { grid-template-columns: 1fr; }
 }
@@ -381,4 +381,30 @@ a:focus-visible, .btn:focus-visible, summary:focus-visible {
   html { scroll-behavior: auto; }
   .deck .card { opacity: 0; }
   .deck .card:first-child { opacity: 1; }
+}
+
+
+.tools { grid-area: tools; display: flex; flex-wrap: wrap; gap: .6rem; margin-bottom: 1rem; font-family: var(--sans); }
+#search, #sort {
+  flex: 1 1 260px; min-width: 0; padding: .65rem .9rem;
+  border: 1px solid var(--grat); border-radius: var(--r-ctl); background: var(--sheet);
+  color: var(--ink); font: inherit; font-size: .95rem;
+  transition: border-color .18s var(--ease), box-shadow .18s var(--ease);
+}
+
+
+#search:focus { outline: none; border-color: var(--ocean); box-shadow: 0 0 0 3px var(--ocean-mist); }
+.card.is-hidden { display: none; }
+.empty { grid-area: empty; margin-top: 1.4rem; padding: 1.25rem; text-align: center; color: var(--ink-soft); border: 1px dashed var(--grat); border-radius: var(--r-card); }
+.empty[hidden] { display: none; }
+
+.chip small {
+    font-size: 0.8em;
+    font-weight: 400;
+    opacity: 0.75;
+}
+
+.tools .btn {
+
+    padding: 0.6rem 1rem; 
 }

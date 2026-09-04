@@ -6,6 +6,8 @@
 <title>Worldbook — country cards and quizzes</title>
 <meta name="description" content="Country cards with capitals, populations, landmarks and facts for countries around the world, plus multiple-choice quizzes by category. Built with HTML and CSS only.">
 <link rel="stylesheet" href="style.css">
+
+<script src="script.js" defer></script>
 </head>
 <body>
 
@@ -26,10 +28,10 @@
   <section class="hero">
     <div class="wrap">
       <div>
-        <h1>The world in index cards.</h1>
+        <h1>Every Country Cards</h1>
         <p class="lead">Capitals, populations, landmarks and the stray facts worth keeping, for 63 countries so far. Read a few, then see what stuck.</p>
         <div class="actions">
-          <a class="btn primary" href="#explore">Browse countries</a>
+          <a class="btn primary" href="#explore">Explore these cards</a>
           <a class="btn quiet" href="#quiz">Start a quiz</a>
         </div>
       </div>
@@ -82,7 +84,17 @@
         <h2>Countries by region</h2>
         <p>Pick a region or browse everything. Open “Facts and extras” on any card for a fun fact and something that makes the country special. Populations are rounded 2024 estimates.</p>
       </header>
-
+      <div class="tools">
+        <label class="sr" for="search">Search with countries names</label>
+        <input id="search" type="search" placeholder="Search with country, capital, landmark, etc" autocomplete="off">
+        <label class="sr" for="sort">Sort cards</label>
+        <select id="sort">
+            <option value="region">Sort: by region</option>
+            <option value="name">Sort: A to Z</option>
+            <option value="pop">Sort: Most people first</option>
+        </select>
+        <button class="btn quiet" type="button" id="expand-all" aria-pressed="false">Show all facts:</button>
+      </div>
       <!-- Region filter: radios drive the CSS, labels are the visible chips -->
       <input class="sr" type="radio" name="region" id="r-all" checked>
       <input class="sr" type="radio" name="region" id="r-africa">
@@ -931,6 +943,7 @@
 
       </div><!-- /.grid -->
       <p class="count">Showing <b></b> countries</p>
+      <p class="empty" hidden>Try searching with different keyword instead, no match</p>
     </div>
   </section>
 
