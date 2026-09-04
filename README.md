@@ -1,0 +1,3 @@
+# Geobits
+
+This is a website which shows us some facts, info and unique details about each country (although only 63 countries info is available right now). In addition to that, it also has a quiz with multiple categories where MCQ type questions are asked. Ideally, you would want to read the facts of countries (if you can :p) and then answer the MCQ. However, you can test your general knowledge or each categories without having to read it : )
