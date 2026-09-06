@@ -42,7 +42,7 @@ if (search) {
 const sort = $(`#sort`);
 if (sort) sort.addEventListener('change', () => {
     const order = [...cards];
-    if (sort.value === 'name') order.sort((a, b) => a.dataset.name.localCompare(b.dataset.name));
+    if (sort.value === 'name') order.sort((a, b) => a.dataset.name.localeCompare(b.dataset.name));
     if (sort.value === 'pop') order.sort((a, b) => b.dataset.pop - a.dataset.pop);
     order.forEach((card) => grid.appendChild(card));
 });

@@ -138,11 +138,7 @@ a:focus-visible, .btn:focus-visible, summary:focus-visible {
 
 /* ---------- Explore: region filter + card grid ---------- */
 .explore { padding: 3.5rem 0 4.5rem; counter-reset: shown; }
-.explore .wrap {
-  display: grid; grid-template-columns: minmax(0, 1fr) auto;
-  grid-template-areas: "head head" "chips count" "progress progress" "chips count" "grid grid" "empty empty";
-  column-gap: 1rem; align-items: center;
-}
+
 .explore .section-head { grid-area: head; }
 .chips { grid-area: chips; display: flex; flex-wrap: wrap; gap: .5rem; font-family: var(--sans); }
 .count { grid-area: count; font-family: var(--sans); font-size: .9rem; color: var(--ink-soft); white-space: nowrap; }
@@ -359,7 +355,7 @@ a:focus-visible, .btn:focus-visible, summary:focus-visible {
   .hero .wrap { grid-template-columns: 1fr; gap: 2.25rem; padding: 3.5rem 0 3rem; }
   .deck { min-height: 380px; max-width: 460px; }
   .section-head { grid-template-columns: 1fr; }
-  .explore .wrap { grid-template-columns: 1fr; grid-template-areas: "head" "tools" "progress" "chips" "count" "grid" "empty"; }
+  .explore .wrap { grid-template-columns: 1fr; grid-template-areas: "head" "tools" "chips" "count" "grid" "empty"; }
   .count { margin-top: .6rem; }
   .about .cols { grid-template-columns: 1fr; }
 }
